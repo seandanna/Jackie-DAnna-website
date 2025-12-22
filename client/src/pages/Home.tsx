@@ -47,19 +47,19 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 py-24">
-        <div className="relative z-20 flex flex-col items-center justify-center max-w-5xl w-full px-4">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50">
+        <div className="relative z-20 flex flex-col items-center justify-center w-full px-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8 md:mb-12 w-full max-w-xs md:max-w-none"
+            className="w-full max-w-xs md:max-w-none"
           >
             <img 
               src={heroImage} 
               alt="Jackie D'Anna" 
               style={{ width: "100%", maxWidth: "735px", height: "auto", aspectRatio: "735/897" }}
-              className="object-cover rounded-lg shadow-2xl"
+              className="object-cover rounded-lg shadow-2xl mx-auto"
             />
           </motion.div>
 
@@ -67,7 +67,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="font-serif text-4xl sm:text-5xl md:text-7xl tracking-tighter text-gray-900 mb-3 md:mb-4 text-center"
+            className="font-serif text-4xl sm:text-5xl md:text-7xl tracking-tighter text-gray-900 mt-6 md:mt-8 text-center"
           >
             JACKIE D'ANNA
           </motion.h1>
