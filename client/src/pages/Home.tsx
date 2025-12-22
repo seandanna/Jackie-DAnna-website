@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className="bg-background text-foreground min-h-screen overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 p-4 md:p-6 flex justify-center items-center mix-blend-difference text-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 p-4 md:p-6 flex justify-center items-center text-gray-900">
         <div className="flex gap-4 md:gap-8 font-light tracking-wide text-xs md:text-sm items-center">
           <a href="#about" className="hover:text-primary transition-colors">About</a>
           <a href="#gallery" className="hover:text-primary transition-colors">Gallery</a>
@@ -47,7 +47,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-red-950 via-red-900 to-red-950 py-24">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 py-24">
         <div className="relative z-20 flex flex-col items-center justify-center max-w-5xl w-full px-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -67,7 +67,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="font-serif text-4xl sm:text-5xl md:text-7xl tracking-tighter text-white mb-3 md:mb-4 text-center"
+            className="font-serif text-4xl sm:text-5xl md:text-7xl tracking-tighter text-gray-900 mb-3 md:mb-4 text-center"
           >
             JACKIE D'ANNA
           </motion.h1>
@@ -75,7 +75,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="font-sans text-sm md:text-lg tracking-[0.3em] uppercase text-white/90 text-center"
+            className="font-sans text-sm md:text-lg tracking-[0.3em] uppercase text-gray-700 text-center"
           >
             Actress & Performer
           </motion.p>
@@ -85,7 +85,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 animate-bounce"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-600 animate-bounce"
         >
           <ArrowDown size={24} />
         </motion.div>
