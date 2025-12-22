@@ -49,7 +49,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 py-12">
+      <section className="relative w-full flex flex-col items-center justify-center bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 pt-32">
         <div className="relative z-20 flex flex-col items-center justify-center w-full px-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
