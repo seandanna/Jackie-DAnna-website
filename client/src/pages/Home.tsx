@@ -4,7 +4,7 @@ import { ArrowDown, Instagram, Twitter, Mail, Film, Theater, Clapperboard, Award
 import { Link } from "wouter";
 
 // Import assets
-import heroImage from "@assets/generated_images/cinematic_actress_portrait_hero_shot.png";
+import heroImage from "@assets/SNAPS_X_JACKIE-477_1766444720628.jpg";
 import stageImage from "@assets/generated_images/actress_performing_emotional_stage_scene.png";
 import setImage from "@assets/generated_images/behind_the_scenes_film_set_moment.png";
 import carpetImage from "@assets/generated_images/red_carpet_elegant_fashion_shot.png";
