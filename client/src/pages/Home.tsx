@@ -32,22 +32,24 @@ export default function Home() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
-    <div className="bg-background text-foreground min-h-screen overflow-x-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 p-4 md:p-6 flex justify-center items-center text-gray-900">
-        <div className="flex gap-4 md:gap-8 font-light tracking-wide text-xs md:text-sm items-center">
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
-          <a href="#gallery" className="hover:text-primary transition-colors">Gallery</a>
-          <a href="#" className="font-serif text-xl md:text-2xl tracking-widest uppercase px-2 md:px-4">J.D.</a>
-          <Link href="/resume">
-            <a className="hover:text-primary transition-colors">Resume</a>
-          </Link>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-        </div>
-      </nav>
+    <div className="bg-background text-foreground overflow-x-hidden">
+      {/* Navigation Header */}
+      <header className="w-full bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 py-4 md:py-6 sticky top-0 z-40">
+        <nav className="flex justify-center items-center">
+          <div className="flex gap-4 md:gap-8 font-light tracking-wide text-xs md:text-sm items-center text-gray-900">
+            <a href="#about" className="hover:text-primary transition-colors">About</a>
+            <a href="#gallery" className="hover:text-primary transition-colors">Gallery</a>
+            <a href="#" className="font-serif text-xl md:text-2xl tracking-widest uppercase px-2 md:px-4">J.D.</a>
+            <Link href="/resume">
+              <a className="hover:text-primary transition-colors">Resume</a>
+            </Link>
+            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+          </div>
+        </nav>
+      </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50">
+      <section className="relative min-h-[calc(100vh-100px)] flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50">
         <div className="relative z-20 flex flex-col items-center justify-center w-full px-4">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
