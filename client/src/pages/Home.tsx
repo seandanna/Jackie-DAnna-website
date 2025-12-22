@@ -42,7 +42,7 @@ export default function Home() {
     <div className="bg-background text-foreground min-h-screen overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center mix-blend-difference text-white">
-        <a href="#" className="font-serif text-2xl tracking-widest uppercase">E.V.</a>
+        <a href="#" className="font-serif text-2xl tracking-widest uppercase">J.D.</a>
         <div className="hidden md:flex gap-8 font-light tracking-wide text-sm">
           <a href="#about" className="hover:text-primary transition-colors">About</a>
           <a href="#gallery" className="hover:text-primary transition-colors">Gallery</a>
@@ -52,33 +52,34 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 z-0"
-          style={{ y }}
-        >
-          <div className="absolute inset-0 bg-black/40 z-10" />
-          <img 
-            src={heroImage} 
-            alt="Elena Vore Hero" 
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-red-950 via-red-900 to-red-950 py-24">
+        <div className="relative z-20 flex flex-col items-center justify-center max-w-5xl w-full px-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-12"
+          >
+            <img 
+              src={heroImage} 
+              alt="Jackie D'Anna" 
+              className="w-72 md:w-96 h-auto object-contain rounded-lg shadow-2xl"
+            />
+          </motion.div>
 
-        <div className="relative z-20 text-center px-4">
           <motion.h1 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="font-serif text-6xl md:text-9xl tracking-tighter text-white mb-4"
+            transition={{ duration: 1, delay: 0.5 }}
+            className="font-serif text-5xl md:text-7xl tracking-tighter text-white mb-4 text-center"
           >
-            ELENA VORE
+            JACKIE D'ANNA
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="font-sans text-sm md:text-lg tracking-[0.3em] uppercase text-white/80"
+            transition={{ duration: 1, delay: 1.1 }}
+            className="font-sans text-sm md:text-lg tracking-[0.3em] uppercase text-white/90 text-center"
           >
             Actress & Performer
           </motion.p>
@@ -87,8 +88,8 @@ export default function Home() {
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce"
+          transition={{ delay: 1.8, duration: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 animate-bounce"
         >
           <ArrowDown size={24} />
         </motion.div>
