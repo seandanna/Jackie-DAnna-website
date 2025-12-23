@@ -6,7 +6,7 @@ import ResumeModal from "../components/ResumeModal";
 
 // Import assets
 import heroImage from "@assets/SNAPS_X_JACKIE-477_1766444720628.jpg";
-import stageImage from "@assets/generated_images/actress_performing_emotional_stage_scene.png";
+import aboutImage from "@assets/SNAPS_X_JACKIE-628_1766517701393.jpg";
 import setImage from "@assets/generated_images/behind_the_scenes_film_set_moment.png";
 import carpetImage from "@assets/generated_images/red_carpet_elegant_fashion_shot.png";
 
@@ -94,17 +94,17 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-32 px-4 md:px-12 bg-background relative z-10">
+      <section id="about" className="py-16 md:py-32 px-4 md:px-12 bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 relative z-10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <motion.div 
             {...fadeIn}
             className="space-y-6"
           >
             <span className="text-primary tracking-widest text-xs md:text-sm uppercase font-semibold">About Me</span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif leading-tight text-gray-900">
               Actor, Writer, and Producer
             </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed font-light">
+            <div className="space-y-4 text-gray-800 leading-relaxed font-light">
               <p>
                 Jackie D'Anna is an actor, writer, and producer with a diverse background in performance. She starred in <em>The Last Call Girl</em> at the Lee Strasberg Theater for the Short+Sweet Festival Hollywood 2022, reaching the semi-finalist round. Alongside her twin sister, she co-created sketch comedy and films under "Harvel Twinz", exploring mixed-race identity and the actor's life.
               </p>
@@ -125,9 +125,9 @@ export default function Home() {
           >
             <div className="absolute inset-0 border border-primary/30 translate-x-4 translate-y-4 -z-10" />
             <img 
-              src={stageImage} 
-              alt="On Stage" 
-              className="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              src={aboutImage} 
+              alt="Jackie D'Anna" 
+              className="w-full aspect-[4/5] object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-700"
             />
           </motion.div>
         </div>
