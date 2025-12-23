@@ -54,13 +54,13 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative w-full flex flex-col items-center justify-center bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 pt-32">
-        <div className="relative z-20 flex flex-col items-center justify-center w-full px-4">
+      <section className="relative w-full flex flex-col items-center justify-center bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 pt-32 pb-12">
+        <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 max-w-2xl">
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full max-w-xs md:max-w-none"
+            className="relative w-full"
           >
             <img 
               src={heroImage} 
@@ -68,24 +68,22 @@ export default function Home() {
               style={{ width: "100%", maxWidth: "735px", height: "auto", aspectRatio: "735/897" }}
               className="object-cover rounded-lg shadow-2xl mx-auto"
             />
+            
+            {/* Name overlay on image */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 rounded-lg"
+            >
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl tracking-tighter text-white drop-shadow-lg text-center">
+                JACKIE D'ANNA
+              </h1>
+              <p className="font-sans text-xs md:text-sm tracking-[0.3em] uppercase text-white drop-shadow-md text-center mt-2">
+                Actress & Performer
+              </p>
+            </motion.div>
           </motion.div>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="font-serif text-4xl sm:text-5xl md:text-7xl tracking-tighter text-gray-900 mt-6 md:mt-8 text-center"
-          >
-            JACKIE D'ANNA
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.1 }}
-            className="font-sans text-sm md:text-lg tracking-[0.3em] uppercase text-gray-700 text-center"
-          >
-            Actress & Performer
-          </motion.p>
         </div>
 
         <motion.div 

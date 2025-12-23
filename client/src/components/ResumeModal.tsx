@@ -25,9 +25,9 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-hidden"
       >
-        <div className="w-full max-w-4xl max-h-[90vh] bg-gradient-to-br from-amber-100 via-orange-50 to-amber-100 rounded-lg overflow-y-auto shadow-2xl">
+        <div className="w-full max-w-5xl h-[90vh] bg-gradient-to-br from-amber-100 via-orange-50 to-amber-100 rounded-lg shadow-2xl flex flex-col">
           {/* Header */}
           <div className="sticky top-0 flex items-center justify-between p-8 bg-gradient-to-br from-amber-100 via-orange-50 to-amber-100 border-b border-white/20">
             <h1 className="font-serif text-4xl text-gray-900">Resume</h1>
@@ -40,7 +40,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           </div>
 
           {/* Content */}
-          <div className="p-8">
+          <div className="p-8 overflow-y-auto flex-1" style={{ fontSize: "0.85rem" }}>
             <div className="grid md:grid-cols-2 gap-12">
               {/* Left Column */}
               <div>
