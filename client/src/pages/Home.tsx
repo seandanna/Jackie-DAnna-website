@@ -39,9 +39,9 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 w-full bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 py-4 md:py-6 z-50">
         <nav className="flex justify-center items-center">
           <div className="flex gap-4 md:gap-8 font-light tracking-wide text-xs md:text-sm items-center text-gray-900">
+            <a href="#" className="hover:text-primary transition-colors">Home</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#gallery" className="hover:text-primary transition-colors">Gallery</a>
-            <a href="#" className="font-serif text-xl md:text-2xl tracking-widest uppercase px-2 md:px-4">J.D.</a>
             <button
               onClick={() => setShowResume(true)}
               className="hover:text-primary transition-colors"
