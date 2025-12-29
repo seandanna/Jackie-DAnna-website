@@ -37,22 +37,7 @@ const staggerContainer = {
   }
 };
 
-const galleryImages = [
-  { src: img1, alt: "Contemplative Moment", aspect: "aspect-[3/4]" },
-  { src: img2, alt: "Thoughtful Look", aspect: "aspect-[3/4]" },
-  { src: img3, alt: "Joyful Smile", aspect: "aspect-[3/4]" },
-  { src: img4, alt: "Gentle Gaze", aspect: "aspect-[3/4]" },
-  { src: img5, alt: "Serene Portrait", aspect: "aspect-[3/4]" },
-  { src: img6, alt: "Playful Pose", aspect: "aspect-[3/4]" },
-  { src: img8, alt: "Professional Power", aspect: "aspect-[3/4]" },
-  { src: img9, alt: "Direct Connection", aspect: "aspect-[3/4]" },
-  { src: img10, alt: "Carefree Spirit", aspect: "aspect-[3/4]" },
-  { src: img11, alt: "Radiant Energy", aspect: "aspect-[3/4]" },
-  { src: img12, alt: "Poised Strength", aspect: "aspect-[3/4]" },
-  { src: img13, alt: "Pure Laughter", aspect: "aspect-[3/4]" },
-  { src: img14, alt: "Warm Approach", aspect: "aspect-[3/4]" },
-  { src: img15, alt: "Candid Joy", aspect: "aspect-[3/4]" },
-];
+const galleryImages: { src: string; alt: string; aspect: string }[] = [];
 
 export default function Gallery() {
   return (
