@@ -42,6 +42,9 @@ export default function Home() {
             <Link href="/gallery">
               <a className="hover:text-primary transition-colors">Gallery</a>
             </Link>
+            <Link href="/reel">
+              <a className="hover:text-primary transition-colors">Reel</a>
+            </Link>
             <button
               onClick={() => setShowResume(true)}
               className="hover:text-primary transition-colors"

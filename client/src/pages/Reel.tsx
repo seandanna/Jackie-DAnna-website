@@ -1,0 +1,114 @@
+import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { Instagram, Mail } from "lucide-react";
+import ResumeModal from "../components/ResumeModal";
+import { useState } from "react";
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.8, ease: "easeOut" }
+} as const;
+
+const reels = [
+  {
+    title: "Comedic Reel",
+    url: "https://www.youtube.com/embed/F5wiIok27Oo",
+    description: "A showcase of comedic timing and character work."
+  },
+  {
+    title: "Dramatic Reel",
+    url: "https://www.youtube.com/embed/iygC0deViBk",
+    description: "Exploring depth, vulnerability, and dramatic range."
+  }
+];
+
+export default function Reel() {
+  const [showResume, setShowResume] = useState(false);
+
+  return (
+    <div className="bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 text-foreground overflow-x-hidden min-h-screen">
+      {/* Navigation Header - Fixed */}
+      <header className="fixed top-0 left-0 right-0 w-full bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 py-4 md:py-6 z-50">
+        <nav className="flex justify-center items-center">
+          <div className="flex gap-4 md:gap-8 font-light tracking-wide text-xs md:text-sm items-center text-gray-900">
+            <Link href="/">
+              <a className="hover:text-primary transition-colors">Home</a>
+            </Link>
+            <Link href="/#about">
+              <a className="hover:text-primary transition-colors">About</a>
+            </Link>
+            <Link href="/gallery">
+              <a className="hover:text-primary transition-colors">Gallery</a>
+            </Link>
+            <Link href="/reel">
+              <a className="hover:text-primary transition-colors">Reel</a>
+            </Link>
+            <button
+              onClick={() => setShowResume(true)}
+              className="hover:text-primary transition-colors"
+            >
+              Resume
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Reel Section */}
+      <section className="py-20 md:py-32 px-4 md:px-6 mt-16">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            {...fadeIn}
+            className="text-center mb-16 md:mb-20"
+          >
+            <h1 className="font-serif text-4xl md:text-6xl mb-6 text-gray-900" data-testid="text-reel-title">Reel</h1>
+          </motion.div>
+
+          <div className="space-y-16 md:space-y-24">
+            {reels.map((reel, index) => (
+              <motion.div
+                key={index}
+                {...fadeIn}
+                className="space-y-6"
+                data-testid={`section-reel-${index}`}
+              >
+                <div className="flex flex-col md:flex-row justify-between items-baseline mb-4">
+                  <h2 className="font-serif text-2xl md:text-3xl text-gray-900">{reel.title}</h2>
+                  <p className="text-gray-600 text-sm md:text-base italic">{reel.description}</p>
+                </div>
+                <div className="relative aspect-video w-full overflow-hidden rounded-xl shadow-2xl bg-black">
+                  <iframe
+                    src={reel.url}
+                    title={reel.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                    data-testid={`iframe-reel-${index}`}
+                  ></iframe>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 text-center">
+        <div className="flex justify-center gap-6 md:gap-8">
+          <a href="#" className="p-3 rounded-full hover:opacity-70 transition-opacity text-gray-900">
+            <Mail size={24} />
+          </a>
+          <a href="#" className="p-3 rounded-full hover:opacity-70 transition-opacity text-gray-900">
+            <Instagram size={24} />
+          </a>
+        </div>
+        <div className="pt-8 text-xs text-gray-600 tracking-widest uppercase">
+          &copy; 2025 Jackie D'Anna. All Rights Reserved.
+        </div>
+      </section>
+
+      <ResumeModal isOpen={showResume} onClose={() => setShowResume(false)} />
+    </div>
+  );
+}
