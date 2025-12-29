@@ -18,6 +18,7 @@ import img12 from "@assets/SNAPS_X_JACKIE-242_1767048309685.jpg";
 import img13 from "@assets/SNAPS_X_JACKIE-220_1767048309685.jpg";
 import img14 from "@assets/SNAPS_X_JACKIE-137_1767048309686.jpg";
 import img15 from "@assets/SNAPS_X_JACKIE-14_1767048309686.jpg";
+import img16 from "@assets/SNAPS_X_JACKIE-631_1767048980243.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -52,6 +53,7 @@ const galleryImages = [
   { src: img13, alt: "Pure Laughter", aspect: "aspect-[3/4]" },
   { src: img14, alt: "Warm Approach", aspect: "aspect-[3/4]" },
   { src: img15, alt: "Candid Joy", aspect: "aspect-[3/4]" },
+  { src: img16, alt: "Editorial Close-up", aspect: "aspect-[3/4]" },
 ];
 
 export default function Gallery() {
