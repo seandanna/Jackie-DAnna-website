@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowLeft, Instagram, Mail } from "lucide-react";
 import ResumeModal from "../components/ResumeModal";
+import Footer from "../components/Footer";
 import { useState } from "react";
 
 // Import assets
@@ -123,20 +124,8 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Footer with Social Icons */}
-      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 text-center">
-        <div className="flex justify-center gap-6 md:gap-8">
-          <a href="#" className="p-3 rounded-full hover:opacity-70 transition-opacity text-gray-900">
-            <Mail size={24} />
-          </a>
-          <a href="#" className="p-3 rounded-full hover:opacity-70 transition-opacity text-gray-900">
-            <Instagram size={24} />
-          </a>
-        </div>
-        <div className="pt-8 text-xs text-gray-600 tracking-widest uppercase">
-          &copy; 2025 Jackie D'Anna. All Rights Reserved.
-        </div>
-      </section>
+      {/* Footer */}
+      <Footer />
 
       <ResumeModal isOpen={showResume} onClose={() => setShowResume(false)} />
     </div>

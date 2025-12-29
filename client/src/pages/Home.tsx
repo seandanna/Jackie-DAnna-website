@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Instagram, Mail } from "lucide-react";
 import { Link } from "wouter";
 import ResumeModal from "../components/ResumeModal";
+import Footer from "../components/Footer";
 
 // Import assets
 import heroImage from "@assets/SNAPS_X_JACKIE-477_1766444720628.jpg";
@@ -135,20 +136,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer with Social Icons */}
-      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50 text-center">
-        <div className="flex justify-center gap-6 md:gap-8">
-          <a href="#" className="p-3 rounded-full hover:opacity-70 transition-opacity text-gray-900">
-            <Mail size={24} />
-          </a>
-          <a href="#" className="p-3 rounded-full hover:opacity-70 transition-opacity text-gray-900">
-            <Instagram size={24} />
-          </a>
-        </div>
-        <div className="pt-8 text-xs text-gray-600 tracking-widest uppercase">
-          &copy; 2025 Jackie D'Anna. All Rights Reserved.
-        </div>
-      </section>
+      {/* Footer */}
+      <Footer />
 
       {/* Resume Modal */}
       <ResumeModal isOpen={showResume} onClose={() => setShowResume(false)} />
