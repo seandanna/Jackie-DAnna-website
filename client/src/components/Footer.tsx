@@ -7,8 +7,8 @@ const imdbIcon = (
 );
 
 const actorsAccessIcon = (
-  <div className="w-8 h-8 rounded-full border border-gray-900 flex items-center justify-center p-0.5 overflow-hidden transition-all">
-    <span className="text-[6px] font-black leading-[1.1] text-center uppercase tracking-tighter">
+  <div className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center p-0.5 overflow-hidden transition-all">
+    <span className="text-white text-[6px] font-black leading-[1.1] text-center uppercase tracking-tighter">
       Actors<br/>Access
     </span>
   </div>
@@ -31,35 +31,41 @@ export default function Footer() {
           href="https://www.instagram.com/jackiehdanna/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="p-2 transition-transform hover:scale-110 text-gray-900"
+          className="p-2 transition-transform hover:scale-110"
           title="Instagram"
         >
-          <Instagram size={24} />
+          <div className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center shadow-sm">
+            <Instagram size={16} className="text-white" />
+          </div>
         </a>
         <a 
           href="https://www.linkedin.com/in/jackiedanna/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="p-2 transition-transform hover:scale-110 text-gray-900"
+          className="p-2 transition-transform hover:scale-110"
           title="LinkedIn"
         >
-          <Linkedin size={24} />
+          <div className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center shadow-sm">
+            <Linkedin size={16} className="text-white" />
+          </div>
         </a>
         <a 
           href="https://resumes.actorsaccess.com/jackiedanna" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group p-2 transition-transform hover:scale-110 text-gray-900"
+          className="p-2 transition-transform hover:scale-110"
           title="Actors Access"
         >
           {actorsAccessIcon}
         </a>
         <a 
           href="mailto:contact@jackiedanna.com" 
-          className="p-2 transition-transform hover:scale-110 text-gray-900"
+          className="p-2 transition-transform hover:scale-110"
           title="Email"
         >
-          <Mail size={24} />
+          <div className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center shadow-sm">
+            <Mail size={16} className="text-white" />
+          </div>
         </a>
       </div>
       <div className="pt-8 text-xs text-gray-600 tracking-widest uppercase">
