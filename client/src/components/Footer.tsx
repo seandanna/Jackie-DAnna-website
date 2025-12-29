@@ -1,14 +1,14 @@
 import { Instagram, Linkedin, Mail } from "lucide-react";
 
 const imdbIcon = (
-  <svg viewBox="0 0 448 512" fill="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM21.3 229.2H21c.1-.1.2-.3.3-.4zM97 319V192h20.2v127H97zm44.8 0V192h21l13.6 57.1h.4l13.8-57.1h21v127h-18.7v-90.8h-.4l-14.7 90.8h-15.5l-14.7-90.8h-.4V319h-18.7zM261 192h30.2c19.3 0 30.2 11.5 30.2 29.8v67.5c0 18.2-10.9 29.7-30.2 29.7H261V192zm20.2 110.3h10c9.1 0 10.1-4.1 10.1-12.7v-67.5c0-8.6-1-12.7-10.1-12.7h-10v92.9zm101.4 16.7h-10c-9.1 0-10.1-4.1-10.1-12.7v-67.5c0-8.6 1-12.7 10.1-12.7h10c9.1 0 10.1 4.1 10.1 12.7v67.5c0 8.6-1 12.7-10.1 12.7zm-20.2-110.3h30.2c19.3 0 30.2 11.5 30.2 29.8v67.5c0 18.2-10.9 29.7-30.2 29.7h-30.2V192zm20.2 110.3h10c9.1 0 10.1-4.1 10.1-12.7v-67.5c0-8.6-1-12.7-10.1-12.7h-10v92.9z"/>
-  </svg>
+  <div className="w-8 h-8 rounded-sm bg-[#F5C518] flex items-center justify-center p-0.5 shadow-sm">
+    <span className="text-black text-[10px] font-black leading-none tracking-tight">IMDb</span>
+  </div>
 );
 
 const actorsAccessIcon = (
-  <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center p-1 overflow-hidden transition-all group-hover:bg-gray-900 group-hover:text-white">
-    <span className="text-[7px] font-black leading-[1.1] text-center uppercase tracking-tighter">
+  <div className="w-8 h-8 rounded-full border border-gray-900 flex items-center justify-center p-0.5 overflow-hidden transition-all group-hover:bg-gray-900 group-hover:text-white">
+    <span className="text-[6px] font-black leading-[1.1] text-center uppercase tracking-tighter">
       Actors<br/>Access
     </span>
   </div>
