@@ -20,13 +20,34 @@ export default function Contact() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In mockup mode, we'll simulate sending and open the mailto link
-    const subject = encodeURIComponent("inquiry from jackiedanna.com");
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:jackieharvel@gmail.com?subject=${subject}&body=${body}`;
-    setIsSubmitted(true);
+    
+    try {
+      // NOTE: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree ID
+      // from https://formspree.io/ after you sign up for a free account.
+      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "inquiry from jackiedanna.com"
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert("There was an error sending your message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("There was an error sending your message. Please try again.");
+    }
   };
 
   return (
