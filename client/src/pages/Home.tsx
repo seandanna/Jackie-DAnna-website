@@ -39,7 +39,6 @@ export default function Home() {
         <nav className="flex justify-center items-center">
           <div className="flex gap-4 md:gap-8 font-light tracking-wide text-xs md:text-sm items-center text-gray-900">
             <a href="#" className="hover:text-primary transition-colors">Home</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
             <Link href="/gallery">
               <a className="hover:text-primary transition-colors">Gallery</a>
             </Link>

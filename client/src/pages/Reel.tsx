@@ -43,9 +43,6 @@ export default function Reel() {
             <Link href="/">
               <a className="hover:text-primary transition-colors">Home</a>
             </Link>
-            <Link href="/#about">
-              <a className="hover:text-primary transition-colors">About</a>
-            </Link>
             <Link href="/gallery">
               <a className="hover:text-primary transition-colors">Gallery</a>
             </Link>
