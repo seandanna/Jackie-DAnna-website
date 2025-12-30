@@ -40,17 +40,17 @@ const staggerContainer = {
 };
 
 const galleryImages = [
-  { src: img6, alt: "White shirt editorial" },
   { src: img10, alt: "Casual beauty" },
+  { src: img7, alt: "Expressive look" },
   { src: img12, alt: "Red shirt powerful" },
   { src: img14, alt: "Warm connection" },
-  { src: img7, alt: "Expressive look" },
+  { src: img8, alt: "Black shirt professional" },
   { src: img11, alt: "Radiant smile" },
   { src: img15, alt: "Playful energy" },
-  { src: img8, alt: "Black shirt professional" },
+  { src: img9, alt: "Direct gaze" },
   { src: img13, alt: "Unbridled laughter" },
   { src: img2, alt: "Thoughtful moment" },
-  { src: img9, alt: "Direct gaze" },
+  { src: img6, alt: "White shirt editorial" },
   { src: img5, alt: "Classic portrait" },
   { src: img1, alt: "Candid portrait with trees" },
   { src: img3, alt: "Joyful expression with trees" },
