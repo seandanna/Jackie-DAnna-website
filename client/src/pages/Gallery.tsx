@@ -93,19 +93,19 @@ export default function Gallery() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-6 space-y-4 md:space-y-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           >
             {galleryImages.map((image, index) => (
               <motion.div 
                 key={index}
                 variants={fadeIn} 
-                className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500`}
+                className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500 aspect-[3/4]"
                 data-testid={`card-gallery-item-${index}`}
               >
                 <img 
                   src={image.src} 
                   alt={image.alt} 
-                  className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105" 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
                   data-testid={`img-gallery-${index}`}
                 />
               </motion.div>
