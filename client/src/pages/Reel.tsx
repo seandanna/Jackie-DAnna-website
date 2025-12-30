@@ -47,7 +47,7 @@ export default function Reel() {
               <a className="hover:text-primary transition-colors">Gallery</a>
             </Link>
             <Link href="/reel">
-              <a className="hover:text-primary transition-colors">Reel</a>
+              <a className="text-primary font-medium transition-colors">Reel</a>
             </Link>
             <button
               onClick={() => setShowResume(true)}
@@ -55,6 +55,9 @@ export default function Reel() {
             >
               Resume
             </button>
+            <Link href="/contact">
+              <a className="hover:text-primary transition-colors">Contact</a>
+            </Link>
           </div>
         </nav>
       </header>

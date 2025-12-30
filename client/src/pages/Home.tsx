@@ -51,6 +51,9 @@ export default function Home() {
             >
               Resume
             </button>
+            <Link href="/contact">
+              <a className="hover:text-primary transition-colors">Contact</a>
+            </Link>
           </div>
         </nav>
       </header>
