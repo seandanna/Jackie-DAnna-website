@@ -65,10 +65,11 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 </div>
                 <a
                   href="/resume.pdf"
-                  download="Jackie_DAnna_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-900 underline hover:opacity-70 transition-opacity text-xs sm:text-sm md:text-base flex items-center gap-1 sm:gap-2"
                 >
-                  📄 Download Resume
+                  📄 View Resume
                 </a>
               </div>
 
