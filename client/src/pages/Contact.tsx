@@ -55,7 +55,7 @@ export default function Contact() {
       {/* Navigation Header */}
       <header className="fixed top-0 left-0 right-0 w-full bg-white/10 backdrop-blur-md border-b border-white/10 py-4 md:py-6 z-50">
         <nav className="flex justify-center items-center">
-          <div className="flex gap-4 md:gap-8 font-light tracking-wide text-xs md:text-sm items-center text-gray-900">
+          <div className="flex gap-4 md:gap-8 font-bold tracking-widest text-[10px] md:text-xs items-center text-gray-900 uppercase">
             <Link href="/">
               <a className="hover:text-primary transition-colors">Home</a>
             </Link>
