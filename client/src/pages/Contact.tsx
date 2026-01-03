@@ -23,27 +23,17 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
     try {
-      // NOTE: Replace 'YOUR_FORMSPREE_ID' with your actual Formspree ID
-      // from https://formspree.io/ after you sign up for a free account.
-      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+      await fetch("/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          _subject: "inquiry from jackiedanna.com"
-        })
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
       });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-      } else {
-        alert("There was an error sending your message. Please try again.");
-      }
+      
+      setIsSubmitted(true);
     } catch (error) {
       console.error("Submission error:", error);
       alert("There was an error sending your message. Please try again.");
@@ -96,7 +86,7 @@ export default function Contact() {
                   <Mail size={32} />
                 </div>
                 <h2 className="text-2xl font-serif">Thank you!</h2>
-                <p className="text-gray-600">Your email client has been opened to send your inquiry.</p>
+                <p className="text-gray-600">Your message has been sent successfully.</p>
                 <button 
                   onClick={() => setIsSubmitted(false)}
                   className="mt-8 text-primary underline hover:opacity-70 transition-opacity"
@@ -105,12 +95,20 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1 tracking-wider uppercase">Name</label>
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     required
                     data-testid="input-name"
                     className="w-full bg-white/50 border border-gray-200 rounded-md py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none font-light"
@@ -123,6 +121,7 @@ export default function Contact() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     data-testid="input-email"
                     className="w-full bg-white/50 border border-gray-200 rounded-md py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none font-light"
@@ -134,6 +133,7 @@ export default function Contact() {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1 tracking-wider uppercase">Message</label>
                   <textarea
                     id="message"
+                    name="message"
                     required
                     data-testid="input-message"
                     rows={6}
